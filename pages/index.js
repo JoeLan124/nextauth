@@ -1,10 +1,19 @@
 import styles from "../styles/Home.module.css";
+
+import router from "next/router";
 import { useSession, signOut, signIn } from "next-auth/react";
 
 export default function Home() {
   const { data: session, status } = useSession();
   return (
     <div className={styles.container}>
+      {session ? (
+        <p>You are logged in</p>
+      ) : (
+        <p>
+          You are not logged in .<a href="/api/auth/signin">Link to signup</a>
+        </p>
+      )}
       {session && (
         <p>
           {session.user.email}{" "}
@@ -19,7 +28,6 @@ export default function Home() {
           </button>
         </p>
       )}
-      <a href="/api/auth/signin">Link to signup</a>
     </div>
   );
 }
