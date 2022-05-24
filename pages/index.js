@@ -1,5 +1,4 @@
 import styles from "../styles/Home.module.css";
-
 import router from "next/router";
 import { useSession, signOut, signIn } from "next-auth/react";
 
