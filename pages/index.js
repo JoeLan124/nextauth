@@ -16,7 +16,7 @@ export default function Home() {
       ) : (
         <p>
           You are not logged in2:
-          <Link href="/api/auth/signin/email">Link to signup</Link>
+          <Link href="/api/auth/signin">Link to signup</Link>
         </p>
       )}
 
