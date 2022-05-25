@@ -1,5 +1,6 @@
 import styles from "../styles/Home.module.css";
 import router from "next/router";
+import Link from "next/link";
 import { useSession, signOut, signIn } from "next-auth/react";
 
 export default function Home() {
@@ -14,7 +15,8 @@ export default function Home() {
         <p>You are logged in</p>
       ) : (
         <p>
-          You are not logged in .<a href="/api/auth/signin">Link to signup</a>
+          You are not logged in .
+          <Link href="/api/auth/signin">Link to signup</Link>
         </p>
       )}
 
