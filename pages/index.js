@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {session ? (
-        <p>You are logged in</p>
+        <p>You are logged in::</p>
       ) : (
         <p>
           You are not logged in: .
